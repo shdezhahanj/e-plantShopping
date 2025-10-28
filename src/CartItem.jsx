@@ -1,9 +1,8 @@
-import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { removeItem, updateQuantity } from './CartSlice';
 import './CartItem.css';
 
-const CartItem = ({ onContinueShopping }) => {
+const CartItem = ({ onContinueShopping }) => { // eslint-disable-line react/prop-types
   const cart = useSelector(state => state.cart.items);
   const dispatch = useDispatch();
 
@@ -42,7 +41,7 @@ const CartItem = ({ onContinueShopping }) => {
     return (parseFloat(item.cost.substring(1)) * item.quantity).toFixed(2);
   };
 
-  const handleCheckoutShopping = (e) => {
+  const handleCheckoutShopping = () => {
     alert('Functionality to be added for future reference');
   };
 
